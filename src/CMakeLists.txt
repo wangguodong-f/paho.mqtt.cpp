@@ -115,9 +115,8 @@ endif()
 include(GNUInstallDirs)
 
 foreach(TARGET ${PAHO_CPP_TARGETS})
-    target_compile_features(${TARGET} PRIVATE cxx_std_17)
-
     set_target_properties(${TARGET} PROPERTIES
+        CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
         CXX_EXTENSIONS OFF
     )
