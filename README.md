@@ -41,7 +41,7 @@ The latest updates move the codebase to C++17 and adds supoort for UNIX-domain s
 - Support for UNIX-domain sockets
 - Reorganize and reformat the sources and added a .clang-format capability.
 - Create universal client instances that can connect using v3 or v5. (i.e. no more instances that are only v3 capable)
-- Bump the CMake to v3.12
+- Bump the CMake to v3.13
 - Fix a number of CMake build issues
 - Update the GitHub CI
 
@@ -65,7 +65,7 @@ As of v1.5, the Paho C++ library uses C++17 features, and thus requires a fully 
 
 _CMake_  is a cross-platform build system suitable for Unix and non-Unix platforms such as Microsoft Windows. It is now the only supported build system. The current supported minimum version is:
 
-* cmake v3.12
+* cmake v3.13
 
 The Paho C++ library requires the Paho C library, v1.3.14 or greater, to be built and installed. That can be done before building this library, or it can be done here using the CMake `PAHO_WITH_MQTT_C` build option to build both libraries at the same time. This also guarantees that a proper version of the C library is used, and that it is build with compatible options.
 
@@ -113,7 +113,7 @@ On *nix systems CMake creates Makefiles.
 
 The build process currently supports a number of Unix and Linux flavors. The build process requires the following tools:
 
-* CMake v3.12 or newer
+* CMake v3.13 or newer
 * A fully-compatible C++17 compiler. Common options are:
     * GCC v8 or later
     * _clang_ v5 or later
@@ -211,7 +211,7 @@ It's better not to mix DLLs and static libraries, but if you do link the Paho C+
 #### Building the Library on Windows
 
 The build process currently supports a number Windows versions. The build process requires the following tools:
-  * CMake GUI v3.12 or newer
+  * CMake GUI v3.13 or newer
   * Visual Studio 2019 or newer
 
 The libraries can be completely built at an MSBuild Command Prompt. Download the Paho C and C++ library sources, then open a command window and first compile the Paho C library:
