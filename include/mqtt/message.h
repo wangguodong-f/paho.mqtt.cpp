@@ -64,6 +64,10 @@ public:
 private:
     /** Initializer for the C struct (from the C library) */
     static constexpr MQTTAsync_message DFLT_C_STRUCT MQTTAsync_message_initializer;
+    /** A const string to use for references */
+    static const string EMPTY_STR;
+    /** A const binary to use for references */
+    static const binary EMPTY_BIN;
 
     /** The underlying C message struct */
     MQTTAsync_message msg_{DFLT_C_STRUCT};
@@ -259,7 +263,6 @@ public:
      * @return The topic string for the message.
      */
     const string& get_topic() const {
-        static const string EMPTY_STR;
         return topic_ ? topic_.str() : EMPTY_STR;
     }
     /**
@@ -274,14 +277,12 @@ public:
      * Gets the payload
      */
     const binary& get_payload() const {
-        static const binary EMPTY_BIN;
         return payload_ ? payload_.str() : EMPTY_BIN;
     }
     /**
      * Gets the payload as a string
      */
     const string& get_payload_str() const {
-        static const string EMPTY_STR;
         return payload_ ? payload_.str() : EMPTY_STR;
     }
     /**

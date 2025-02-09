@@ -23,6 +23,12 @@
 
 namespace mqtt {
 
+// A const string to use for references
+const string message::EMPTY_STR;
+
+// A const binary to use for references
+const binary message::EMPTY_BIN;
+
 /////////////////////////////////////////////////////////////////////////////
 
 message::message(
