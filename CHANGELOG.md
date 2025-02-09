@@ -7,9 +7,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [Version 1.5.1](https://github.com/eclipse/paho.mqtt.cpp/compare/v1.5.0..v1.5.1) - (2025-02-08)
+## [Version 1.5.1](https://github.com/eclipse/paho.mqtt.cpp/compare/v1.5.0..v1.5.1) - (2025-02-09)
 
+- Minor fixes to README and docs
 - [#532](https://github.com/eclipse-paho/paho.mqtt.cpp/pull/532) Fix CMake install target lib path
+- [#534](https://github.com/eclipse-paho/paho.mqtt.cpp/issues/534) Fixed seg fault with clang in get_topic() when publishing a message
 - [#535](https://github.com/eclipse-paho/paho.mqtt.cpp/issues/535) Fixed last few files that were not properly licenced for EPL v2.0
 
 
