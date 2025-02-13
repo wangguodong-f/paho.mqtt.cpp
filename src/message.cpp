@@ -17,6 +17,7 @@
  *******************************************************************************/
 
 #include "mqtt/message.h"
+#include "mqtt/export.h"
 
 #include <cstring>
 #include <utility>
@@ -24,10 +25,10 @@
 namespace mqtt {
 
 // A const string to use for references
-const string message::EMPTY_STR;
+PAHO_MQTTPP_EXPORT const string message::EMPTY_STR;
 
 // A const binary to use for references
-const binary message::EMPTY_BIN;
+PAHO_MQTTPP_EXPORT const binary message::EMPTY_BIN;
 
 /////////////////////////////////////////////////////////////////////////////
 

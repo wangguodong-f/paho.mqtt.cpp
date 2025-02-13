@@ -65,9 +65,9 @@ private:
     /** Initializer for the C struct (from the C library) */
     static constexpr MQTTAsync_message DFLT_C_STRUCT MQTTAsync_message_initializer;
     /** A const string to use for references */
-    static const string EMPTY_STR;
+    PAHO_MQTTPP_EXPORT static const string EMPTY_STR;
     /** A const binary to use for references */
-    static const binary EMPTY_BIN;
+    PAHO_MQTTPP_EXPORT static const binary EMPTY_BIN;
 
     /** The underlying C message struct */
     MQTTAsync_message msg_{DFLT_C_STRUCT};
