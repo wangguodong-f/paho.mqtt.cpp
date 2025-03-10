@@ -17,10 +17,11 @@
  *******************************************************************************/
 
 #include "mqtt/message.h"
-#include "mqtt/export.h"
 
 #include <cstring>
 #include <utility>
+
+#include "mqtt/export.h"
 
 namespace mqtt {
 

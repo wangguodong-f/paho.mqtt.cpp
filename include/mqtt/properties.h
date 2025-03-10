@@ -31,10 +31,10 @@ extern "C" {
 #include <initializer_list>
 #include <iostream>
 #include <map>
+#include <stdexcept>
 #include <string_view>
 #include <tuple>
 #include <typeinfo>
-#include <stdexcept>
 
 #include "mqtt/buffer_ref.h"
 #include "mqtt/exception.h"
@@ -410,9 +410,7 @@ public:
      * @param i The index
      * @return The property at the specified index.
      */
-    const property operator[](size_t i) const {
-        return property{props_.array[i]};
-    }
+    const property operator[](size_t i) const { return property{props_.array[i]}; }
     /**
      * Gets the property at the specified index in the collection.
      * @param i The index
@@ -478,9 +476,11 @@ public:
      * @return The number of properties in the list with the specified ID.
      */
     size_t count(property::code propid) const {
-        return size_t(::MQTTProperties_propertyCount(
-            const_cast<MQTTProperties*>(&props_), MQTTPropertyCodes(propid)
-        ));
+        return size_t(
+            ::MQTTProperties_propertyCount(
+                const_cast<MQTTProperties*>(&props_), MQTTPropertyCodes(propid)
+            )
+        );
     }
     /**
      * Gets the property with the specified ID.

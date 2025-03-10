@@ -8,7 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Upcoming Version 1.5.2 (unreleased)
  
+- Synchronous `Client` constructors updated to use `persistence_type` and (just) `create_options` 
+    - Restored compatiblity with `async_client`
 - [#537](https://github.com/eclipse-paho/paho.mqtt.cpp/issues/537) Fixed the Windows DLL build by exporting message::EMPTY_STR and message::EMPTY_BIN 
+- [#540](https://github.com/eclipse-paho/paho.mqtt.cpp/issues/537) Missing default argument in `async_client` changed constructor breaks code compatibility
 
 
 

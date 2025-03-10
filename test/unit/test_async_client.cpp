@@ -44,8 +44,9 @@ static const std::string GOOD_SSL_SERVER_URI{"ssl://localhost:18885"};
 
 static const std::string BAD_SERVER_URI{"one://invalid.address"};
 static const std::string CLIENT_ID{"test_async_client"};
-static const std::string PERSISTENCE_DIR{"persist"};
 static const std::string TOPIC{"topic"};
+
+static const persistence_type PERSISTENCE_DIR{"persist"};
 
 static const int GOOD_QOS{0};
 static const int BAD_QOS{3};
