@@ -31,6 +31,7 @@ set(EXECUTABLES
     async_publish
     async_publish_time
     async_subscribe
+    async_subscribe_v5
     async_consume
     async_consume_v5
     async_message_consume

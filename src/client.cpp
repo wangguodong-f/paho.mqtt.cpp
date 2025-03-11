@@ -61,9 +61,7 @@ client::client(
 }
 
 client::client(const create_options& opts)
-    : cli_(opts),
-      timeout_(DFLT_TIMEOUT),
-      userCallback_(nullptr)
+    : cli_(opts), timeout_(DFLT_TIMEOUT), userCallback_(nullptr)
 {
 }
 
