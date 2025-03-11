@@ -812,7 +812,7 @@ public:
     bool consumer_closed() noexcept override { return !que_ || que_->closed(); }
     /**
      * Determines if the consumer queue is "done" (closed and empty).
-     * Once the queue is done, no more events can be added or removed fom
+     * Once the queue is done, no more events can be added or removed from
      * the queue.
      * @return @true if the consumer queue is closed and empty, @false
      *         otherwise.

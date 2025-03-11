@@ -9,7 +9,7 @@
 //  - Connecting to an MQTT server/broker
 //  - Subscribing to multiple topics
 //  - Receiving messages through the queueing consumer API
-//  - Recieving and acting upon commands via MQTT topics
+//  - Receiving and acting upon commands via MQTT topics
 //  - Manual reconnects
 //  - Using a persistent (non-clean) session
 //

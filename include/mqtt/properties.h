@@ -419,7 +419,7 @@ public:
     const property at(size_t i) const {
         if (i < size_t(props_.count))
             return property{props_.array[i]};
-        throw std::out_of_range{"propery index"};
+        throw std::out_of_range{"property index"};
     }
     /**
      * Gets the numbers of property items in the list.

@@ -212,13 +212,13 @@ public:
      */
     explicit topic_filter(const string& filter);
     /**
-     * Determins if the character is a wildcard, '+' or '#'
+     * Determines if the character is a wildcard, '+' or '#'
      * @param c The character to check
      * @return @em true if `c` is a wildcard, '+' or '#'
      */
     static bool is_wildcard(char c) { return c == '+' || c == '#'; }
     /**
-     * Determins if the string (field) is a wildcard, "+" or "#"
+     * Determines if the string (field) is a wildcard, "+" or "#"
      * @param s The string to check
      * @return @em true if `c` is a wildcard, "+" or "#"
      */
