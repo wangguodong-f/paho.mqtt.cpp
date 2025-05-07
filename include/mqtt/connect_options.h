@@ -197,6 +197,12 @@ public:
     const MQTTAsync_connectOptions& c_struct() const { return opts_; }
 #endif
     /**
+     * Get socket fwmark for connection.
+     */
+    int get_socket_fwmark() {
+        return opts_.socket_fwmark;
+    }
+    /**
      * Gets the "keep alive" interval.
      * @return The keep alive interval in seconds.
      */
@@ -351,6 +357,12 @@ public:
      *              for the client across reconnects, @em false otherwise.
      */
     void set_clean_start(bool cleanStart);
+    /**
+     * Set socket fwmark for connection.
+     */
+    void set_socket_fwmark(int fwmark) {
+        opts_.socket_fwmark = fwmark;
+    }
     /**
      * Sets the "keep alive" interval.
      * This is the maximum time that should pass without communications
@@ -721,6 +733,13 @@ public:
      */
     auto clean_session(bool on = true) -> self& {
         opts_.set_clean_session(on);
+        return *this;
+    }
+    /**
+     * Set socket fwmark for connection.
+     */
+    auto socket_fwmark(int fwmark) -> self& {
+        opts_.set_socket_fwmark(fwmark);
         return *this;
     }
     /**
